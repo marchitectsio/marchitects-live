@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marchitects | Architecture of Trust</title>
+
+  <!-- SEO & Identity -->
+  <meta name="description" content="We design the Trust Systems that secure Institutional Legacy. We build permanent and structural digital infrastructure that future generations reference as truth." />
+  <link rel="canonical" href="https://marchitects.builders/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:site_name" content="Marchitects" />
+  <meta property="og:title" content="Marchitects | Architecture of Trust" />
+  <meta property="og:description" content="We design the Trust Systems that secure Institutional Legacy. We build permanent and structural digital infrastructure that future generations reference as truth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marchitects.builders/" />
+  <meta property="og:image" content="https://marchitects.builders/og.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marchitects | Architecture of Trust" />
+  <meta name="twitter:description" content="We design the Trust Systems that secure Institutional Legacy. We build permanent and structural digital infrastructure that future generations reference as truth." />
+  <meta name="twitter:image" content="https://marchitects.builders/og.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config for "Steel Net" Aesthetic -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            steel: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            brand: {
+              paper: '#f8f9fa',
+              dark: '#0a0a0a',
+              secure: '#10b981',
+            },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    const CAL_URL = 'https://cal.com/marchitectsbuilders/disco';
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 9999;
+      background: #0f172a;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 9999px;
+      font: 600 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: top 160ms ease;
+    }
+    .skip-link:focus { top: 16px; outline: none; }
+
+        /*
+  Marchitects Water Ripple
+  Continuous, liquid, light-etched (not lunar rings)
+  Pure CSS, no canvas. Authorable via size + contrast vars.
+*/
+:root{
+  --ripple-size: 980px;
+  --ripple-contrast: 0.85;
+  --ripple-soft: 0.75;
+}
+
+.ripple-container{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+  pointer-events:none;
+}
+
+.water-ripple{
+  position:absolute;
+  top:46%;
+  left:52%;
+  width:var(--ripple-size);
+  height:var(--ripple-size);
+  transform:translate(-50%,-50%);
+  border-radius:9999px;
+  filter: blur(0.2px);
+  opacity:0.9;
+  will-change: transform, opacity;
+  /* liquid highlight + trough shading */
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.55) 10%, rgba(255,255,255,0.0) 18%),
+    radial-gradient(circle at 50% 52%, rgba(15,23,42,0.08) 0%, rgba(15,23,42,0.0) 26%),
+    repeating-radial-gradient(circle at 50% 50%,
+      rgba(255,255,255, calc(0.16 * var(--ripple-contrast))) 0px,
+      rgba(255,255,255,0.00) 16px,
+      rgba(15,23,42, calc(0.10 * var(--ripple-contrast))) 22px,
+      rgba(15,23,42,0.00) 34px);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 78%);
+}
+
+.water-ripple::before,
+.water-ripple::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:inherit;
+  opacity:0.9;
+}
+
+/* center droplet impression */
+.water-ripple::before{
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.70) 0%, rgba(255,255,255,0.10) 12%, rgba(255,255,255,0.0) 22%),
+    radial-gradient(circle at 50% 56%, rgba(15,23,42,0.12) 0%, rgba(15,23,42,0.0) 30%),
+    repeating-radial-gradient(circle at 50% 50%,
+      rgba(255,255,255, calc(0.10 * var(--ripple-contrast))) 0px,
+      rgba(255,255,255,0.00) 20px,
+      rgba(15,23,42, calc(0.07 * var(--ripple-contrast))) 28px,
+      rgba(15,23,42,0.00) 42px);
+  transform:scale(0.86);
+  opacity:calc(0.72 * var(--ripple-soft));
+  filter: blur(0.4px);
+}
+
+/* outer echo layer */
+.water-ripple::after{
+  transform:scale(1.06);
+  opacity:calc(0.40 * var(--ripple-soft));
+  filter: blur(0.8px);
+}
+
+@keyframes waterPulse{
+  0%   { transform:translate(-50%,-50%) scale(0.84); opacity:0.0; }
+  18%  { opacity:0.95; }
+  60%  { opacity:0.55; }
+  100% { transform:translate(-50%,-50%) scale(1.06); opacity:0.0; }
+}
+
+@keyframes waterPulse2{
+  0%   { transform:translate(-50%,-50%) scale(0.88); opacity:0.0; }
+  26%  { opacity:0.55; }
+  100% { transform:translate(-50%,-50%) scale(1.10); opacity:0.0; }
+}
+
+@keyframes waterPulse3{
+  0%   { transform:translate(-50%,-50%) scale(0.92); opacity:0.0; }
+  34%  { opacity:0.35; }
+  100% { transform:translate(-50%,-50%) scale(1.14); opacity:0.0; }
+}
+
+.water-ripple.layer-1{ animation: waterPulse 6.8s cubic-bezier(0.16,1,0.3,1) infinite; }
+.water-ripple.layer-2{ animation: waterPulse2 6.8s cubic-bezier(0.16,1,0.3,1) infinite; }
+.water-ripple.layer-3{ animation: waterPulse3 6.8s cubic-bezier(0.16,1,0.3,1) infinite; }
+/* Elegance card */
+    .elegant-card {
+      background-color: #ffffff;
+      border: 1px solid #f1f5f9;
+      border-radius: 0.75rem;
+      padding: 2.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .elegant-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 50px -10px rgba(15, 23, 42, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    /* Fade on scroll */
+    .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+    /* Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .ripple-ring { animation: none !important; opacity: 0.22; }
+      .animate-bounce { animation: none !important; }
+      .fade-on-scroll { transition: none !important; opacity: 1 !important; transform: none !important; }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-brand-paper text-steel-700 font-sans antialiased selection:bg-steel-800 selection:text-white">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-steel-100" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0 flex items-center gap-2" aria-label="Marchitects Home">
+          <span class="font-serif text-2xl font-bold text-steel-900 tracking-wide">MARCHITECTS<span class="text-steel-400">.</span></span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="#mission" class="text-xs font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Mission</a>
+          <a href="#services" class="text-xs font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Services</a>
+          <a href="#who-we-serve" class="text-xs font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Who We Serve</a>
+          <a href="#proof" class="text-xs font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Proof</a>
+          <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="bg-steel-900 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-steel-700 transition-all duration-300 shadow-lg">
+            Consultation
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn"
+                  aria-label="Open menu"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                  onclick="toggleMobileMenu()"
+                  class="text-steel-800 p-2 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-steel-100 bg-white/95 backdrop-blur-md">
+      <div class="px-6 py-6 space-y-6">
+        <a href="#mission" class="block text-xs font-bold uppercase tracking-widest text-steel-600">Mission</a>
+        <a href="#services" class="block text-xs font-bold uppercase tracking-widest text-steel-600">Services</a>
+        <a href="#who-we-serve" class="block text-xs font-bold uppercase tracking-widest text-steel-600">Who We Serve</a>
+        <a href="#proof" class="block text-xs font-bold uppercase tracking-widest text-steel-600">Proof</a>
+        <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer"
+           class="inline-flex justify-center w-full bg-steel-900 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest">
+          Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <header class="relative min-h-screen pt-24 flex items-center justify-center text-center px-4 overflow-hidden bg-brand-paper">
+      <div class="ripple-container" aria-hidden="true">
+        <div class="water-ripple layer-1"></div>
+        <div class="water-ripple layer-2" style="animation-delay: 1.7s;"></div>
+        <div class="water-ripple layer-3" style="animation-delay: 3.4s;"></div>
+      </div>
+        <div class="ripple-ring secondary" style="animation-delay: 1.6s;"></div>
+        <div class="ripple-ring tertiary" style="animation-delay: 3.2s;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto space-y-10 fade-on-scroll visible opacity-100 translate-y-0">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-steel-100 border border-steel-200 text-steel-600 text-xs font-bold tracking-widest uppercase">
+          <i data-lucide="shield-check" class="w-3 h-3 text-steel-800"></i>
+          <span>The Architecture of Trust</span>
+        </div>
+
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium text-steel-900 leading-[1.1] tracking-tight">
+          We design the Trust Systems<br />
+          <span class="text-steel-400 italic">that secure Institutional Legacy.</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-steel-800 max-w-3xl mx-auto leading-relaxed font-medium">
+          We build permanent and structural digital infrastructure that future generations and AI systems will reference as truth.
+        </p>
+
+        <!-- Primary CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center px-10 py-4 bg-steel-900 text-white rounded-full text-xs font-bold uppercase tracking-widest shadow-xl hover:bg-steel-700 transition-all">
+            <span>Schedule Consultation</span>
+          </a>
+          <a href="#services"
+             class="inline-flex items-center justify-center px-10 py-4 bg-white text-steel-900 border border-steel-200 rounded-full text-xs font-bold uppercase tracking-widest hover:border-steel-300 hover:shadow-lg transition-all">
+            <span>Explore Services</span>
+          </a>
+        </div>
+
+        <!-- Micro trust line (kept clean, no fluff) -->
+        <p class="text-xs uppercase tracking-[0.18em] text-steel-500 font-mono pt-4">
+          Primary source engineering • public record authorship • archival infrastructure
+        </p>
+      </div>
+
+      <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
+        <i data-lucide="arrow-down" class="w-6 h-6 text-steel-300"></i>
+      </div>
+    </header>
+
+    <!-- Authority Strip -->
+    <section class="bg-white border-y border-steel-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-steel-100">
+          <div class="px-4 py-8 fade-on-scroll">
+            <div class="text-steel-800 mb-4 flex justify-center"><i data-lucide="compass" class="w-8 h-8"></i></div>
+            <h3 class="font-serif text-xl mb-2 text-steel-900">Strategic Recon</h3>
+            <p class="text-steel-500 text-sm leading-relaxed font-light">Identifying the terrain ahead to secure key narratives before they are contested.</p>
+          </div>
+          <div class="px-4 py-8 fade-on-scroll">
+            <div class="text-steel-800 mb-4 flex justify-center"><i data-lucide="fingerprint" class="w-8 h-8"></i></div>
+            <h3 class="font-serif text-xl mb-2 text-steel-900">Verified Identity</h3>
+            <p class="text-steel-500 text-sm leading-relaxed font-light">Immutable source material that AI systems utilize as the single source of truth.</p>
+          </div>
+          <div class="px-4 py-8 fade-on-scroll">
+            <div class="text-steel-800 mb-4 flex justify-center"><i data-lucide="landmark" class="w-8 h-8"></i></div>
+            <h3 class="font-serif text-xl mb-2 text-steel-900">Structural Legacy</h3>
+            <p class="text-steel-500 text-sm leading-relaxed font-light">Preserving the human loop inside the future AI infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="pt-24 pb-4 bg-brand-paper" id="mission">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20 fade-on-scroll">
+          <h2 class="font-serif text-4xl text-steel-900 mb-6">The Strategic Necessity</h2>
+          <div class="h-1 w-20 bg-steel-300 mx-auto rounded-full"></div>
+          <p class="mt-8 text-steel-600 max-w-3xl mx-auto text-2xl md:text-3xl leading-relaxed italic font-serif">
+            We build the permanent libraries that news cycles reference.
+          </p>
+          <p class="mt-6 text-steel-500 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+            Our systems preserve your life's work and establish permanent truth at the personal, cultural, and generational level.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="bg-white p-10 rounded-2xl shadow-sm border border-steel-100 fade-on-scroll">
+            <div class="w-16 h-16 bg-steel-900 text-white rounded-full flex items-center justify-center text-xl font-serif font-bold mb-8 mx-auto md:mx-0">01</div>
+            <h3 class="font-serif text-2xl text-steel-900 mb-4">Signal Architecture</h3>
+            <p class="text-steel-600 leading-relaxed text-sm font-light">We architect the primary source material, ensuring your institutional knowledge is structurally sound for digital ingest.</p>
+          </div>
+          <div class="bg-white p-10 rounded-2xl shadow-sm border border-steel-100 fade-on-scroll">
+            <div class="w-16 h-16 bg-steel-500 text-white rounded-full flex items-center justify-center text-xl font-serif font-bold mb-8 mx-auto md:mx-0">02</div>
+            <h3 class="font-serif text-2xl text-steel-900 mb-4">High-Fidelity Archival</h3>
+            <p class="text-steel-600 leading-relaxed text-sm font-light">We produce broadcast-quality documentary records using hybrid avatars to scale the voice of the expert without dilution.</p>
+          </div>
+          <div class="bg-white p-10 rounded-2xl shadow-sm border border-steel-100 fade-on-scroll">
+            <div class="w-16 h-16 bg-steel-900 text-white rounded-full flex items-center justify-center text-xl font-serif font-bold mb-8 mx-auto md:mx-0">03</div>
+            <h3 class="font-serif text-2xl text-steel-900 mb-4">Immutable Trust</h3>
+            <p class="text-steel-600 leading-relaxed text-sm font-light">The artifact is locked into the digital infrastructure, ensuring future AI models reference your truth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="pt-6 pb-20 bg-white border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6 fade-on-scroll">
+          <span class="text-steel-400 font-bold tracking-widest text-xs uppercase mb-2 block">Systems & Frameworks</span>
+          <h2 class="font-serif text-4xl text-steel-900">Services</h2>
+          <p class="mt-4 text-steel-500 max-w-3xl mx-auto text-base leading-relaxed font-light">
+            A single system can include documentation, public record validation, and infrastructure for future reference.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Trust Dossiers</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Immediate documentation that withstands legal challenge, media distortion, and institutional scrutiny.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Evidence set • citations • timeline</div>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Strategic Language Systems</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Communication frameworks that deliver your message to the intended audience with fidelity across digital platforms.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Messaging map • copy • positioning</div>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Digital Archive Architecture</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Information frameworks that survive technological transitions while preserving content integrity and searchability.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Vault • indexing • retrieval</div>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Legacy Documentation</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Records that transfer knowledge and authority across generations, functioning as legal instruments.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Biographies • affidavits • exhibits</div>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Cultural Memory Systems</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Frameworks that capture creative wisdom for future stakeholders, ensuring continuity through leadership transitions.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Oral history • media • stewardship</div>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-5 italic font-medium">Public Record Authorship</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Narrative infrastructure for public validation and cultural legitimacy across platforms and movements.</p>
+            <div class="mt-8 pt-6 border-t border-steel-100 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">Notability audit • citations • profiles</div>
+          </div>
+        </div>
+
+        <!-- Pricing anchor (optional, clean) -->
+        <div class="mt-14 max-w-4xl mx-auto bg-brand-paper border border-steel-200 rounded-2xl p-10 fade-on-scroll">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div>
+              <h3 class="font-serif text-2xl text-steel-900">Engagement model</h3>
+              <p class="mt-3 text-steel-600 leading-relaxed font-light">
+                Each build is scoped as a system: documentation + validation + infrastructure. Delivery includes an organized source library.
+              </p>
+            </div>
+            <div class="shrink-0">
+              <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center px-10 py-4 bg-steel-900 text-white rounded-full text-xs font-bold uppercase tracking-widest shadow-xl hover:bg-steel-700 transition-all">
+                Request Scope Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section id="who-we-serve" class="py-24 bg-stone-50 border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-on-scroll">
+          <span class="text-steel-400 font-bold tracking-widest text-xs uppercase mb-3 block">Institutional Stakeholders</span>
+          <h2 class="font-serif text-4xl text-steel-900">Who We Serve</h2>
+          <p class="mt-5 text-steel-500 max-w-3xl mx-auto text-base leading-relaxed font-light">
+            We serve clients whose work attracts scrutiny, imitation, or distortion.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Founders & Executives</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Your achievements documented to survive succession transitions and protect your authority.</p>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Family Offices</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Systems that preserve family history, values, and knowledge beyond wealth management. Generational continuity.</p>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Cultural Organizations</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Documentation for galleries and foundations entrusted with irreplaceable knowledge and public history.</p>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Professional Practices</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Legal and consultancy expertise captured and transferable to successors. Preserve your practice.</p>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Artists & Educators</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Protection from misrepresentation for creators. Ensure your work is recorded accurately for future audiences.</p>
+          </div>
+          <div class="elegant-card fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900 mb-6 italic font-medium">Cultural Leaders</h3>
+            <p class="text-lg text-steel-500 leading-relaxed font-light">Safeguard your reputation against narrative erosion when it shapes movements and communities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof Section (All the Goods) -->
+    <section id="proof" class="py-24 bg-white border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-on-scroll">
+          <span class="text-steel-400 font-bold tracking-widest text-xs uppercase mb-3 block">Proof of Work</span>
+          <h2 class="font-serif text-4xl text-steel-900">What delivery looks like</h2>
+          <p class="mt-5 text-steel-500 max-w-3xl mx-auto text-base leading-relaxed font-light">
+            Every engagement produces an evidence-grade library and a public-facing trust surface.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div class="bg-brand-paper border border-steel-200 rounded-2xl p-10 fade-on-scroll">
+            <h3 class="font-serif text-2xl text-steel-900">Deliverables</h3>
+            <ul class="mt-6 space-y-4 text-steel-600 leading-relaxed">
+              <li class="flex gap-3"><span class="mt-1 text-steel-800"><i data-lucide="check" class="w-5 h-5"></i></span><span>Source library: exhibits, transcripts, references, and verified timeline</span></li>
+              <li class="flex gap-3"><span class="mt-1 text-steel-800"><i data-lucide="check" class="w-5 h-5"></i></span><span>Public record surface: citation-ready profile structure and metadata</span></li>
+              <li class="flex gap-3"><span class="mt-1 text-steel-800"><i data-lucide="check" class="w-5 h-5"></i></span><span>Archive architecture: folders, naming system, and retrieval map</span></li>
+              <li class="flex gap-3"><span class="mt-1 text-steel-800"><i data-lucide="check" class="w-5 h-5"></i></span><span>Language system: positioning narrative and authority statements</span></li>
+            </ul>
+          </div>
+
+          <div class="bg-steel-900 rounded-2xl p-10 fade-on-scroll">
+            <h3 class="font-serif text-2xl text-white">Signals that AI reads</h3>
+            <p class="mt-5 text-white/80 leading-relaxed font-light">
+              We structure your public identity so systems retrieve consistent facts, stable naming, and verified references.
+            </p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div class="text-white mb-3"><i data-lucide="braces" class="w-6 h-6"></i></div>
+                <div class="text-xs font-mono uppercase tracking-[0.18em] text-white/70">Schema + metadata</div>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div class="text-white mb-3"><i data-lucide="quote" class="w-6 h-6"></i></div>
+                <div class="text-xs font-mono uppercase tracking-[0.18em] text-white/70">Citation footprint</div>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div class="text-white mb-3"><i data-lucide="file-check" class="w-6 h-6"></i></div>
+                <div class="text-xs font-mono uppercase tracking-[0.18em] text-white/70">Primary source set</div>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div class="text-white mb-3"><i data-lucide="search" class="w-6 h-6"></i></div>
+                <div class="text-xs font-mono uppercase tracking-[0.18em] text-white/70">Retrieval map</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary CTA -->
+        <div class="mt-12 text-center fade-on-scroll">
+          <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center px-12 py-5 bg-steel-900 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-xl hover:bg-steel-700 transition-all">
+            Secure Your Record
+          </a>
+          <p class="mt-5 text-xs font-mono uppercase tracking-[0.18em] text-steel-500">confidential intake • scoped delivery • organized evidence</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-steel-900 py-24 border-t border-steel-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-serif text-4xl md:text-5xl text-white mb-1">Secure the record.</h2>
+      <p class="text-xl text-white mb-10 font-sans font-light italic opacity-90 lowercase">formalizing the primary source.</p>
+
+      <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer"
+         class="inline-block px-12 py-5 bg-white text-steel-900 text-xs font-bold uppercase tracking-widest rounded-full shadow-xl hover:bg-steel-50 transition-all">
+        Schedule Consultation
+      </a>
+
+      <div class="mt-24 text-[11px] font-mono uppercase tracking-[0.2em] text-steel-100 opacity-80">
+        &copy; 2021&ndash;2026 Marchitects | Building Institutional Memory Since 2021
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Single source of truth for consultation link
+    document.querySelectorAll('a[data-cal="1"]').forEach((a) => a.setAttribute('href', CAL_URL));
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const isHiddenNow = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isHiddenNow));
+    }
+
+    // Close mobile menu when an anchor link is tapped
+    document.querySelectorAll('#mobile-menu a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+        document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('mobile-menu').classList.add('hidden');
+        document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu on click outside navbar area
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const nav = document.getElementById('navbar');
+      if (!nav.contains(e.target) && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Navbar shadow
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) navbar.classList.add('shadow-md');
+      else navbar.classList.remove('shadow-md');
+    });
+
+    // Fade on scroll observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.fade-on-scroll').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
