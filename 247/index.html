@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>24/7 Dispatch: Stop Missing Bonds | Marchitects</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea580c", 
+                        "background-dark": "#0B1220",
+                        "slab-navy": "#0f172a",
+                        "gold": "#FBBF24",
+                        "off-white": "#F8FAFC",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glassmorphism {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .slab-border {
+            border-top: 4px solid #ea580c;
+        }
+        .pulse-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .3; }
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-off-white antialiased">
+
+<div class="relative flex min-h-screen w-full flex-col">
+    <header class="sticky top-0 z-50 flex items-center justify-center border-b border-white/5 bg-background-dark/80 px-4 py-3 backdrop-blur-lg">
+        <div class="flex w-full max-w-6xl items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="size-6 text-primary">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                </div>
+                <h2 class="text-xl font-black tracking-tighter uppercase text-white text-left">Marchitects</h2>
+                <div class="hidden md:flex items-center gap-2 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-green-400">
+                    <span class="relative flex h-2 w-2">
+                        <span class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Systems Online
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- DEMO CALL -->
+                <a href="tel:5102544470" class="hidden sm:block text-sm font-bold hover:text-primary transition-colors text-white">Call Demo</a>
+                <!-- BUSINESS TEXT -->
+                <a href="sms:+14157409331" class="bg-primary hover:bg-orange-600 px-4 py-2 rounded font-bold text-sm transition-all text-white">Text YES</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HeroSection -->
+        <section class="relative overflow-hidden border-b border-white/5 bg-slate-900 py-24 md:py-32">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30 grayscale" style="background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark to-background-dark"></div>
+            
+            <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+                <div class="mb-6 inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-primary text-white">
+                    Revenue Alert: 24/7 Monitoring Active
+                </div>
+                <h1 class="text-5xl font-black leading-[1.1] tracking-tighter text-white md:text-7xl mb-6 text-center">
+                    Missed Calls are<br><span class="text-primary">Missed Money</span>
+                </h1>
+                <p class="mx-auto max-w-2xl text-xl font-medium text-slate-400 mb-10 leading-relaxed text-center">
+                    If you don't answer at 2am, <span class="text-white font-bold underline decoration-primary">the bondsman up the street will.</span> Stop losing leads to your competition. We ensure every call is qualified and texted to you instantly.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <!-- DEMO CALL -->
+                    <a href="tel:5102544470" class="flex items-center justify-center rounded bg-white text-background-dark px-8 py-4 text-lg font-black uppercase tracking-wide hover:bg-slate-200 transition-all">
+                        Call the Live Demo
+                    </a>
+                    <!-- STRIPE LINK -->
+                    <a href="https://buy.stripe.com/00wcN4a5Y38z2pp4Kp7wA0j" class="flex items-center justify-center rounded border-2 border-primary text-primary px-8 py-4 text-lg font-black uppercase tracking-wide hover:bg-primary hover:text-white transition-all">
+                        Secure 30-Min Setup
+                    </a>
+                </div>
+
+                <!-- Desktop Manual Entry Block -->
+                <div class="mt-12 inline-block glassmorphism p-6 rounded border-l-4 border-primary text-left text-white">
+                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-3 text-center md:text-left">Mobile Lead Line:</p>
+                    <div class="flex flex-col md:flex-row items-baseline gap-2 md:gap-4">
+                        <p class="font-mono text-2xl font-black">Text <span class="text-primary">YES</span> to (415) 740-9331</p>
+                        <p class="text-slate-500 text-[10px] uppercase font-bold tracking-widest text-center md:text-left">To receive your activation link</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features -->
+        <section class="py-24 bg-slab-navy/50">
+            <div class="mx-auto max-w-6xl px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="text-left text-white">
+                        <h2 class="text-3xl font-black uppercase tracking-tighter mb-12 text-left">RUNNING 24/7 WHILE YOU SLEEP</h2>
+                        <div class="space-y-12">
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 w-3 h-3 rounded-full bg-primary mt-2"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 uppercase text-left">LIVE ANSWER</h3>
+                                    <p class="text-slate-400 text-left">At 2am, callers hang up after 4 rings. We answer in 2. We keep them on the line and out of your competitor's hands.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 w-3 h-3 rounded-full bg-primary mt-2"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 uppercase text-left">ON-CALL QUALIFICATION</h3>
+                                    <p class="text-slate-400 text-left">Our dispatchers qualify the call and gather name, jail location, and bail amount immediately.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 w-3 h-3 rounded-full bg-primary mt-2"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 uppercase text-left">INSTANT SMS HANDOFF</h3>
+                                    <p class="text-slate-400 text-left">You receive a full lead report via SMS instantly. You call them back only when the bond is ready to be written.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slab-border bg-slab-navy p-8 rounded-lg shadow-2xl">
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="font-black uppercase text-xs tracking-widest text-slate-500">Live Profit Capture</h4>
+                            <div class="text-[10px] text-green-500 font-bold uppercase tracking-tighter">Delivered via SMS</div>
+                        </div>
+                        <div class="space-y-4 font-mono text-sm border-l-2 border-primary pl-6 py-2 text-slate-300 text-left">
+                            <p><span class="text-slate-500 text-xs font-bold">CALLER:</span> +1 (555) 123-4567</p>
+                            <p><span class="text-slate-500 text-xs font-bold">JAIL:</span> Central Detention</p>
+                            <p><span class="text-slate-500 text-xs font-bold">BAIL:</span> $50,000</p>
+                            <p><span class="text-slate-500 text-xs font-bold">DEFENDANT:</span> Secured Info</p>
+                            <p><span class="text-slate-500 text-xs font-bold">STATUS:</span> READY TO PAY</p>
+                        </div>
+                        <div class="mt-8 p-4 bg-primary/10 rounded text-center">
+                            <p class="text-xs font-bold text-primary italic text-white">Set up takes 30 minutes. Be live for the next shift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-24 bg-background-dark">
+            <div class="mx-auto max-w-6xl px-4 text-center">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter mb-4 text-white">Pricing</h2>
+                    <p class="text-slate-500 text-lg">One bond pays for the whole year.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Setup Fee -->
+                    <div class="slab-border bg-slab-navy p-10 rounded-lg text-left">
+                        <div class="text-xs font-black text-primary uppercase tracking-[0.2em] mb-4 text-left">Setup</div>
+                        <div class="text-5xl font-black mb-2 text-white text-left">$499</div>
+                        <div class="text-sm text-slate-500 mb-8 italic text-left">One-time operational fee</div>
+                        <ul class="space-y-4 text-sm text-slate-300 mb-10 text-left">
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> Custom Scripting</li>
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> Dedicated Line Setup</li>
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> 30-Min Activation</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/00wcN4a5Y38z2pp4Kp7wA0j" class="block w-full text-center bg-white text-background-dark font-black uppercase py-4 rounded hover:bg-slate-200 transition-all">Secure Setup</a>
+                    </div>
+                    <!-- Monthly Fee -->
+                    <div class="slab-border bg-slab-navy p-10 rounded-lg text-left">
+                        <div class="text-xs font-black text-primary uppercase tracking-[0.2em] mb-4 text-left">Monthly</div>
+                        <div class="text-5xl font-black mb-2 text-white text-left">$149</div>
+                        <div class="text-sm text-slate-500 mb-8 italic text-left">Flat monthly rate</div>
+                        <ul class="space-y-4 text-sm text-slate-300 mb-10 text-left">
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> Unlimited Qualified Leads</li>
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> 24/7 Live Voice</li>
+                            <li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> No Long-term Contracts</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/00wcN4a5Y38z2pp4Kp7wA0j" class="block w-full text-center border-2 border-white text-white font-black uppercase py-4 rounded hover:bg-white hover:text-background-dark transition-all">Subscribe Now</a>
+                    </div>
+                </div>
+                <div class="mt-12 text-center text-sm text-slate-400 italic">
+                    If your dispatch does not capture at least 3 bond leads this weekend, the setup fee is refunded.
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 bg-primary text-white text-center">
+            <div class="mx-auto max-w-4xl px-4 text-center">
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 italic text-center">Go Live Tonight</h2>
+                <p class="text-xl font-bold mb-12 opacity-90 text-white text-center">Secure your 30-minute activation window right now.</p>
+                <div class="flex flex-col items-center gap-6 text-center">
+                    <div class="bg-background-dark text-white p-8 rounded border-b-4 border-white/20 w-full max-w-md">
+                        <p class="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-50 text-center">Business SMS Line</p>
+                        <a href="sms:+14157409331" class="text-3xl md:text-5xl font-black tracking-tighter hover:text-primary transition-colors block text-center">
+                            (415) 740-9331
+                        </a>
+                    </div>
+                    <a href="https://buy.stripe.com/00wcN4a5Y38z2pp4Kp7wA0j" class="bg-white text-background-dark text-xl md:text-2xl px-12 py-5 rounded font-black tracking-tighter hover:scale-105 transition-transform uppercase">
+                        Secure 30-Min Setup
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-background-dark border-t border-white/5 py-12 px-6 text-left">
+        <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-400">
+            <div class="text-left text-white">
+                <h2 class="text-xl font-black uppercase mb-4 tracking-tighter text-white text-left">Marchitects Dispatch</h2>
+                <p class="text-sm max-w-md leading-relaxed text-slate-500 text-left">Northern California Bail Bond Dispatch. We answer the phone so you can write the bond.</p>
+            </div>
+            <div class="space-y-4 text-sm text-left">
+                <div>
+                    <span class="text-slate-500 font-bold uppercase text-[10px] tracking-widest block mb-1">Business Line</span>
+                    <p class="text-white font-mono font-bold">(415) 740-9331</p>
+                </div>
+                <div>
+                    <span class="text-slate-500 font-bold uppercase text-[10px] tracking-widest block mb-1">HQ</span>
+                    <p class="text-white">Northern California</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-[10px] font-bold text-slate-700 uppercase tracking-widest">
+            © Marchitects.
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
