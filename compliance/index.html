@@ -5,7 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PDF Compliance — Marchitects</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          steel: {
+            50: '#f8fafc',
+            100: '#f1f5f9',
+            200: '#e2e8f0',
+            300: '#cbd5e1',
+            400: '#94a3b8',
+            500: '#64748b',
+            600: '#475569',
+            700: '#334155',
+            800: '#1e293b',
+            900: '#0f172a'
+          }
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -37,7 +66,7 @@
   }
 
   /* NAV */
-  nav {
+  .compliance-nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
@@ -578,7 +607,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
+    .compliance-nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hero, .section, .evidence-section { padding-left: 24px; padding-right: 24px; }
     .stats { grid-template-columns: 1fr 1fr; }
@@ -596,15 +625,46 @@
 </head>
 <body>
 
-<nav>
-  <a href="https://marchitects.builders" class="nav-logo">Marchitects</a>
-  <div class="nav-links">
-    <a href="#" class="nav-link">Mission</a>
-    <a href="#" class="nav-link">What We Do</a>
-    <a href="#" class="nav-link">Who We Serve</a>
-    <a href="#" class="nav-link">Proof</a>
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-steel-100" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-24">
+      <a href="/" class="flex-shrink-0 flex items-center gap-2" aria-label="Marchitects Home">
+        <span class="font-serif text-2xl font-bold text-steel-900 tracking-wide">MARCHITECTS<span class="text-steel-400">.</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-10">
+        <a href="/#mission" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Mission</a>
+        <a href="/#what-we-do" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">What We Do</a>
+        <a href="/#who-we-serve" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Who We Serve</a>
+        <a href="/#proof" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Proof</a>
+        <a href="/compliance/" class="text-sm font-bold uppercase tracking-widest text-steel-900 transition-colors">Compliance</a>
+        <a href="/#contact" class="bg-steel-900 text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-steel-700 transition-all duration-300 shadow-lg">Consultation</a>
+      </div>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn"
+                aria-label="Open menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                onclick="toggleMobileMenu()"
+                class="text-steel-800 p-2 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
   </div>
-  <a href="#book" class="nav-cta">Consultation</a>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-steel-100 bg-white/95 backdrop-blur-md">
+    <div class="px-6 py-6 space-y-6">
+      <a href="/#mission" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Mission</a>
+      <a href="/#what-we-do" class="block text-sm font-bold uppercase tracking-widest text-steel-600">What We Do</a>
+      <a href="/#who-we-serve" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Who We Serve</a>
+      <a href="/#proof" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Proof</a>
+      <a href="/compliance/" class="block text-sm font-bold uppercase tracking-widest text-steel-900">Compliance</a>
+      <a href="/#contact"
+         class="inline-flex justify-center w-full bg-steel-900 text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest">Consultation</a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -846,6 +906,39 @@
 </footer>
 
 <script>
+
+  lucide.createIcons();
+
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    const isHiddenNow = menu.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isHiddenNow));
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('navbar');
+    if (!nav.contains(e.target) && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) navbar.classList.add('shadow-md');
+    else navbar.classList.remove('shadow-md');
+  });
+
   function updateCountdown() {
     const deadline = new Date('2026-04-24T00:00:00');
     const now = new Date();
