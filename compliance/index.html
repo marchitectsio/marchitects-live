@@ -5,36 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PDF Compliance — Marchitects</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          steel: {
-            50: '#f8fafc',
-            100: '#f1f5f9',
-            200: '#e2e8f0',
-            300: '#cbd5e1',
-            400: '#94a3b8',
-            500: '#64748b',
-            600: '#475569',
-            700: '#334155',
-            800: '#1e293b',
-            900: '#0f172a'
-          }
-        },
-        fontFamily: {
-          serif: ['"Playfair Display"', 'serif'],
-          sans: ['"Plus Jakarta Sans"', 'sans-serif']
-        }
-      }
-    }
-  };
-</script>
-<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -66,7 +37,7 @@
   }
 
   /* NAV */
-  .compliance-nav {
+  nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
@@ -135,7 +106,7 @@
     align-items: center;
     gap: 10px;
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--muted);
@@ -226,10 +197,10 @@
 
   .deadline-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-right: 48px;
     flex-shrink: 0;
     line-height: 1.6;
@@ -254,10 +225,10 @@
 
   .countdown-unit-label {
     font-family: 'DM Mono', monospace;
-    font-size: 8px;
+    font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-top: 6px;
     display: block;
   }
@@ -277,10 +248,10 @@
 
   .deadline-right-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     display: block;
     margin-bottom: 4px;
   }
@@ -317,7 +288,7 @@
   }
 
   .stat-label {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--muted);
     line-height: 1.6;
   }
@@ -331,10 +302,10 @@
 
   .section-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-bottom: 24px;
     display: block;
   }
@@ -376,10 +347,10 @@
 
   .mandate-card-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-bottom: 20px;
     display: block;
   }
@@ -424,9 +395,9 @@
 
   .step-num {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.14em;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-bottom: 24px;
     display: block;
   }
@@ -464,7 +435,7 @@
 
   .evidence-table th {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
@@ -497,7 +468,7 @@
   .exposure-badge {
     display: inline-block;
     font-family: 'DM Mono', monospace;
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 3px 8px;
@@ -529,10 +500,10 @@
 
   .cta-eyebrow {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-bottom: 28px;
     display: block;
   }
@@ -556,9 +527,9 @@
 
   .cta-disclaimer {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.1em;
-    color: var(--muted-light);
+    color: var(--muted);
     margin-top: 20px;
     text-transform: uppercase;
   }
@@ -584,9 +555,9 @@
 
   .footer-copy {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.08em;
-    color: var(--muted-light);
+    color: var(--muted);
   }
 
   /* FADE IN */
@@ -607,7 +578,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    .compliance-nav { padding: 16px 24px; }
+    nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hero, .section, .evidence-section { padding-left: 24px; padding-right: 24px; }
     .stats { grid-template-columns: 1fr 1fr; }
@@ -625,46 +596,15 @@
 </head>
 <body>
 
-<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-steel-100" id="navbar">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-24">
-      <a href="/" class="flex-shrink-0 flex items-center gap-2" aria-label="Marchitects Home">
-        <span class="font-serif text-2xl font-bold text-steel-900 tracking-wide">MARCHITECTS<span class="text-steel-400">.</span></span>
-      </a>
-
-      <div class="hidden md:flex items-center space-x-10">
-        <a href="/#mission" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Mission</a>
-        <a href="/#what-we-do" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">What We Do</a>
-        <a href="/#who-we-serve" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Who We Serve</a>
-        <a href="/#proof" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Proof</a>
-        <a href="/compliance/" class="text-sm font-bold uppercase tracking-widest text-steel-900 transition-colors">Compliance</a>
-        <a href="/#contact" class="bg-steel-900 text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-steel-700 transition-all duration-300 shadow-lg">Consultation</a>
-      </div>
-
-      <div class="md:hidden flex items-center">
-        <button id="mobile-menu-btn"
-                aria-label="Open menu"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-                onclick="toggleMobileMenu()"
-                class="text-steel-800 p-2 focus:outline-none">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
-    </div>
+<nav>
+  <a href="https://marchitects.builders" class="nav-logo">Marchitects</a>
+  <div class="nav-links">
+    <a href="#" class="nav-link">Mission</a>
+    <a href="#" class="nav-link">What We Do</a>
+    <a href="#" class="nav-link">Who We Serve</a>
+    <a href="#" class="nav-link">Proof</a>
   </div>
-
-  <div id="mobile-menu" class="hidden md:hidden border-t border-steel-100 bg-white/95 backdrop-blur-md">
-    <div class="px-6 py-6 space-y-6">
-      <a href="/#mission" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Mission</a>
-      <a href="/#what-we-do" class="block text-sm font-bold uppercase tracking-widest text-steel-600">What We Do</a>
-      <a href="/#who-we-serve" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Who We Serve</a>
-      <a href="/#proof" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Proof</a>
-      <a href="/compliance/" class="block text-sm font-bold uppercase tracking-widest text-steel-900">Compliance</a>
-      <a href="/#contact"
-         class="inline-flex justify-center w-full bg-steel-900 text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest">Consultation</a>
-    </div>
-  </div>
+  <a href="#book" class="nav-cta">Consultation</a>
 </nav>
 
 <!-- HERO -->
@@ -745,12 +685,12 @@
     <div class="mandate-card">
       <span class="mandate-card-tag">The Scale Problem</span>
       <h3>Manual remediation is not operationally possible in 45 days</h3>
-      <p>A single agenda archive can hold hundreds of documents. Kern County carries 978 PDFs. Moreno Valley: 1,824. Chula Vista: 568 dating back to 2006. Manual remediation at that volume requires months of specialist labor. The deadline does not move.</p>
+      <p>A single agenda archive can hold hundreds of documents. Kern County has 978 PDFs. Moreno Valley: 1,824. Chula Vista: 568 dating back to 2006. Manual remediation at that volume requires months of specialist labor. The deadline does not move.</p>
     </div>
     <div class="mandate-card">
       <span class="mandate-card-tag">The Liability Reality</span>
       <h3>Non-compliant entities carry documented litigation exposure</h3>
-      <p>Title II carries both federal enforcement authority and private right of action. Post-April 24, any entity with untagged public PDFs carries documented exposure. Entities that demonstrate active remediation efforts are in a materially different legal position than those with no record of action.</p>
+      <p>Title II extends both federal enforcement authority and private right of action. Post-April 24, any entity with untagged public PDFs faces documented exposure. Entities that demonstrate active remediation efforts are in a materially different legal position than those with no record of action.</p>
     </div>
   </div>
 </section>
@@ -776,112 +716,53 @@
       <div class="process-step">
         <span class="step-num">03 — Certify</span>
         <h3 class="step-title">Documented compliance record</h3>
-        <p class="step-body">Every remediated document carries a compliance record — what was found, what was corrected, when. You receive documentation that demonstrates active remediation effort, which is legally meaningful whether or not full completion precedes April 24.</p>
+        <p class="step-body">Every remediated document includes a compliance record — what was found, what was corrected, when. You receive documentation that demonstrates active remediation effort, which is legally meaningful whether or not full completion precedes April 24.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EVIDENCE TABLE -->
+<!-- FINDINGS -->
 <section class="evidence-section">
   <span class="section-tag">Audit Intelligence — California Entities</span>
   <h2 class="section-headline">What we found. Already.</h2>
-  <p class="section-body" style="margin-bottom: 0;">A partial view of what the Marchitects audit system identified across California government entities. Every row is a documented compliance gap.</p>
+  <p class="section-body">Marchitects completed a public crawl of 50 California government entities ahead of the April 24 deadline. Every figure below represents documented compliance exposure.</p>
 
   <table class="evidence-table">
     <thead>
       <tr>
-        <th>Entity</th>
-        <th>Type</th>
-        <th>Total PDFs</th>
-        <th>Exposure</th>
-        <th>Primary Document Type</th>
+        <th>Finding</th>
+        <th>Across 50 Entities</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="entity">Moreno Valley</td>
-        <td>City</td>
-        <td class="count">1,824</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>1,742 agenda PDFs back to 2023</td>
+        <td class="entity">Total untagged PDF documents found</td>
+        <td class="count">6,294</td>
       </tr>
       <tr>
-        <td class="entity">Kern County</td>
-        <td>County</td>
-        <td class="count">978</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>700 planning + 165 agenda + 113 procurement</td>
+        <td class="entity">Entities rated High exposure</td>
+        <td class="count">27 of 50</td>
       </tr>
       <tr>
-        <td class="entity">Los Angeles</td>
-        <td>City</td>
-        <td class="count">666</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>532 forms + 124 agenda archive (2014–present)</td>
+        <td class="entity">Active vendor contracts that excluded PDF remediation</td>
+        <td class="count">8 of 11</td>
       </tr>
       <tr>
-        <td class="entity">Chula Vista</td>
-        <td>City</td>
-        <td class="count">568</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>568 agenda PDFs back to 2006</td>
+        <td class="entity">Entities with WCAG 2.1 AA in their accessibility statement</td>
+        <td class="count">0 of 50</td>
       </tr>
       <tr>
-        <td class="entity">Riverside County</td>
-        <td>County</td>
-        <td class="count">376</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>83 agenda + 58 planning + 48 procurement</td>
+        <td class="entity">Documented WCAG remediation spend across all entities</td>
+        <td class="count">$0</td>
       </tr>
       <tr>
-        <td class="entity">Kings County</td>
-        <td>County</td>
-        <td class="count">301</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>299 agenda PDFs back to 2024</td>
+        <td class="entity">Average agenda archive depth</td>
+        <td class="count">4.2 years</td>
       </tr>
       <tr>
-        <td class="entity">Contra Costa County</td>
-        <td>County</td>
-        <td class="count">113</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>51 agenda + 37 planning + 15 procurement</td>
-      </tr>
-      <tr>
-        <td class="entity">Calleguas Water District</td>
-        <td>Water District</td>
-        <td class="count">89</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>87 agenda PDFs back to 2024</td>
-      </tr>
-      <tr>
-        <td class="entity">Monterey County</td>
-        <td>County</td>
-        <td class="count">87</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>52 agenda + 11 planning + 13 procurement</td>
-      </tr>
-      <tr>
-        <td class="entity">San Jose</td>
-        <td>City</td>
-        <td class="count">59</td>
-        <td><span class="exposure-badge exposure-high">High</span></td>
-        <td>56 agenda PDFs in Legistar archive</td>
-      </tr>
-      <tr>
-        <td class="entity">Marin County</td>
-        <td>County</td>
-        <td class="count">26</td>
-        <td><span class="exposure-badge exposure-med">Medium</span></td>
-        <td>24 agenda PDFs back to 2021</td>
-      </tr>
-      <tr>
-        <td class="entity">Sonoma County</td>
-        <td>County</td>
-        <td class="count">42</td>
-        <td><span class="exposure-badge exposure-med">Medium</span></td>
-        <td>14 agenda + 14 planning + 14 procurement</td>
+        <td class="entity">Entity types covered</td>
+        <td class="count">Cities, Counties, Transit, Water Districts</td>
       </tr>
     </tbody>
   </table>
@@ -896,7 +777,7 @@
     <h2 class="cta-headline">See your full exposure report<br><em>before the call ends.</em></h2>
     <p class="cta-sub">We already audited your site. In 15 minutes we walk you through what we found, what remediation looks like at your document volume, and what a defensible compliance record requires before April 24.</p>
     <a href="https://cal.com/socialfollowing" class="btn-primary">Schedule 15 Minutes</a>
-    <p class="cta-disclaimer">Government entities and legal practices only · No obligation</p>
+    
   </div>
 </section>
 
@@ -906,39 +787,6 @@
 </footer>
 
 <script>
-
-  lucide.createIcons();
-
-  function toggleMobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const btn = document.getElementById('mobile-menu-btn');
-    const isHiddenNow = menu.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', String(!isHiddenNow));
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.getElementById('mobile-menu').classList.add('hidden');
-      document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    const menu = document.getElementById('mobile-menu');
-    const btn = document.getElementById('mobile-menu-btn');
-    const nav = document.getElementById('navbar');
-    if (!nav.contains(e.target) && !menu.classList.contains('hidden')) {
-      menu.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) navbar.classList.add('shadow-md');
-    else navbar.classList.remove('shadow-md');
-  });
-
   function updateCountdown() {
     const deadline = new Date('2026-04-24T00:00:00');
     const now = new Date();
