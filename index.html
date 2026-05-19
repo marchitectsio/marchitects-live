@@ -246,104 +246,7 @@
 .water-ripple.layer-3{ animation: waterPulse3 6.8s cubic-bezier(0.16,1,0.3,1) infinite; }
 /*
       Card prominence mockups
-      Switch between styles by changing: <body data-card-style="A|B">
-
-      A = subtle, premium outline + depth (recommended)
-      B = bolder, more "boxed" with accent rail
-    */
-
-    .elegant-card {
-      text-align: left;
-      background-color: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      padding: 2.5rem;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                  background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Option A: subtle lift + clearer edge */
-    body[data-card-style="A"] .elegant-card {
-      border-color: #dbe4ef;
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
-      box-shadow:
-        0 10px 22px -18px rgba(15, 23, 42, 0.22),
-        0 0 0 1px rgba(15, 23, 42, 0.04) inset,
-        0 1px 0 rgba(255, 255, 255, 0.9) inset;
-    }
-    body[data-card-style="A"] .elegant-card:hover {
-      transform: translateY(-7px);
-      border-color: #cbd5e1;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      box-shadow:
-        0 42px 74px -26px rgba(15, 23, 42, 0.18),
-        0 0 0 1px rgba(15, 23, 42, 0.05) inset,
-        0 1px 0 rgba(255, 255, 255, 0.9) inset;
-    }
-
-    /* Option B: stronger presence + accent rail */
-    body[data-card-style="B"] .elegant-card {
-      border-color: #cbd5e1;
-      box-shadow:
-        0 14px 26px -20px rgba(15, 23, 42, 0.22),
-        0 1px 0 rgba(255, 255, 255, 0.85) inset;
-    }
-    body[data-card-style="B"] .elegant-card::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(15,23,42,0.15));
-      opacity: 0.55;
-    }
-    body[data-card-style="B"] .elegant-card:hover {
-      transform: translateY(-8px);
-      border-color: #94a3b8;
-      box-shadow:
-        0 44px 80px -28px rgba(15, 23, 42, 0.18),
-        0 1px 0 rgba(255, 255, 255, 0.85) inset;
-    }
-
-    /* Fade on scroll */
-    .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-
-    .section-kicker {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #475569;
-      margin-bottom: 0.9rem;
-    }
-
-    .pro-divider {
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, rgba(148,163,184,0), rgba(148,163,184,0.5), rgba(148,163,184,0));
-    }
-    .fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
-
-    /* Accessibility: Reduced Motion */
-    @media (prefers-reduced-motion: reduce) {
-      .ripple-ring { animation: none !important; opacity: 0.22; }
-      .animate-bounce { animation: none !important; }
-      .fade-on-scroll { transition: none !important; opacity: 1 !important; transform: none !important; }
-      html { scroll-behavior: auto !important; }
-    }
-  </style>
-</head>
-
-<body data-card-style="A" class="bg-brand-paper text-steel-700 font-sans antialiased selection:bg-steel-800 selection:text-white">
+      Switch between styles by changing: <body data-card-style="A" class="bg-brand-paper text-steel-700 font-sans antialiased selection:bg-steel-800 selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-steel-100" id="navbar">
@@ -354,7 +257,8 @@
         </a>
         <div class="hidden md:flex items-center space-x-10">
           <a href="#services" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Services</a>
-          <a href="#team" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Team</a>
+          <a href="#case-studies" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Case Studies</a>
+          <a href="#testimonials" class="text-sm font-bold uppercase tracking-widest text-steel-500 hover:text-steel-900 transition-colors">Testimonials</a>
           <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="bg-steel-900 text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-steel-700 transition-all duration-300 shadow-lg">Schedule Your Assessment</a>
         </div>
         <div class="md:hidden flex items-center">
@@ -365,7 +269,8 @@
     <div id="mobile-menu" class="hidden md:hidden border-t border-steel-100 bg-white/95 backdrop-blur-md">
       <div class="px-6 py-6 space-y-6">
         <a href="#services" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Services</a>
-        <a href="#team" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Team</a>
+        <a href="#case-studies" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Case Studies</a>
+        <a href="#testimonials" class="block text-sm font-bold uppercase tracking-widest text-steel-600">Testimonials</a>
         <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center w-full bg-steel-900 text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest">Schedule Your Assessment</a>
       </div>
     </div>
@@ -378,20 +283,20 @@
         <div class="water-ripple layer-2" style="animation-delay: 1.7s;"></div>
         <div class="water-ripple layer-3" style="animation-delay: 3.4s;"></div>
       </div>
-      <div class="relative z-10 max-w-5xl mx-auto space-y-10 fade-on-scroll visible opacity-100 translate-y-0">
-        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-steel-900 leading-[1.1] tracking-tight">The most successful businesses are using AI to grow.<br /><span class="text-steel-500">You should be next.</span></h1>
-        <p class="text-lg md:text-xl text-steel-800 mx-auto leading-relaxed font-medium">Marchitects builds growth systems for the AI era.</p>
-        <p class="text-lg md:text-xl text-steel-800 mx-auto leading-relaxed font-medium">We identify where AI creates measurable growth and develop the systems that make it real.</p>
-        <p class="text-lg md:text-xl text-steel-800 mx-auto leading-relaxed font-medium">Our work combines strategic language and agentic systems to turn business identity into measurable growth.</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-4 bg-steel-900 text-white rounded-full text-sm font-bold uppercase tracking-widest shadow-xl hover:bg-steel-700 transition-all"><span>Schedule Your Assessment</span></a>
-        </div>
+      <div class="relative z-10 mx-auto w-full max-w-6xl px-4 flex flex-col items-center gap-6 md:gap-7">
+        <h1 class="font-serif text-[clamp(2.25rem,5.4vw,4.75rem)] leading-[1.18] md:leading-[1.08] tracking-[-0.01em] text-steel-900 max-w-[900px]">
+          <span class="block">The most successful businesses are using AI to grow.</span>
+          <span class="block text-steel-500 mt-3 md:mt-4">You should be next.</span>
+        </h1>
+        <p class="ui-kicker text-steel-600">Marchitects builds growth systems for the AI era.</p>
+        <p class="text-lg md:text-xl text-steel-700 leading-relaxed max-w-[680px]">We identify where AI, automation, and agentic systems create measurable growth, then develop the infrastructure that makes it real.</p>
+        <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-4 bg-steel-900 text-white rounded-full text-sm font-bold uppercase tracking-widest shadow-xl hover:bg-steel-700 transition-all">Schedule Your Assessment</a>
+        <p class="text-sm uppercase tracking-[0.14em] text-steel-500 font-mono">Strategic language. Agentic systems. Measurable growth.</p>
       </div>
     </header>
 
-    <section id="services" class="py-28 bg-white border-t border-steel-100 fade-on-scroll">
+    <section id="services" class="py-24 bg-white border-t border-steel-100">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="section-kicker">The Challenge</p>
         <h2 class="font-serif text-4xl text-steel-900 mb-8">Most businesses are losing time and revenue to manual work that AI can solve.</h2>
         <p class="text-steel-600 text-xl leading-relaxed">The challenge is knowing exactly where and building the right system to fix it.</p>
         <p class="mt-6 text-steel-600 text-xl leading-relaxed">You know AI is changing your industry. You need a clear path from where you are to where AI takes you.</p>
@@ -399,49 +304,68 @@
       </div>
     </section>
 
-    <section class="py-28 bg-brand-paper border-t border-steel-100 fade-on-scroll">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14">
-          <p class="section-kicker">Process</p>
-          <h2 class="font-serif text-4xl text-steel-900">Find. Develop. Deploy.</h2>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section class="py-24 bg-brand-paper border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 1: Find</h3><p class="text-lg text-steel-800 mb-4">Decide what is worth building.</p><p class="text-steel-600 leading-relaxed">We audit your operations to find where your business is bleeding. Time lost, decisions stalled, revenue left on the table. We map where AI creates the fastest return and give you a clear path forward.</p><p class="text-steel-600 leading-relaxed mt-4">This phase saves you time, makes you money, and tells you exactly what to build first.</p></article>
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 2: Develop</h3><p class="text-lg text-steel-800 mb-4">Build the system that makes AI useful.</p><p class="text-steel-600 leading-relaxed">We develop the workflows, automations, language assets, and agentic systems needed to make it real.</p><p class="text-steel-600 leading-relaxed mt-4">This phase turns the assessment into working infrastructure.</p></article>
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 3: Deploy</h3><p class="text-lg text-steel-800 mb-4">Put the system to work.</p><p class="text-steel-600 leading-relaxed">We move the system into your business, refine it around real usage, and support adoption across the team.</p><p class="text-steel-600 leading-relaxed mt-4">This phase turns AI from an idea into operating capacity.</p></article>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-white border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="font-serif text-4xl text-steel-900">Testimonials</h2>
+          <p class="mt-4 text-steel-500 text-lg">What clients and collaborators say about Marchitects.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="elegant-card"><p class="text-steel-700 leading-relaxed text-lg italic">“Marchitects brings structure to complex business problems. The work moves beyond ideas and turns strategy into systems a team can actually use.”</p><p class="mt-8 font-semibold text-steel-900">Paul Liesenberg</p><p class="text-steel-500">Juniper Systems</p></article>
+          <article class="elegant-card"><p class="text-steel-700 leading-relaxed text-lg italic">“Rashida understands how to find the operational gap, clarify the revenue opportunity, and build the language around what needs to happen next.”</p><p class="mt-8 font-semibold text-steel-900">Jonathan Clark</p><p class="text-steel-500">Manchester Real Estate</p></article>
+          <article class="elegant-card"><p class="text-steel-700 leading-relaxed text-lg italic">“Marchitects helped us see customer response, follow up, and local growth as one connected system. That clarity changed how we looked at the business.”</p><p class="mt-8 font-semibold text-steel-900">Angela Mitchell</p><p class="text-steel-500">CubeSmart Storage</p></article>
         </div>
       </div>
     </section>
 
-    <section id="team" class="py-28 bg-white border-t border-steel-100 text-center fade-on-scroll">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="section-kicker">Testimonial</p>
-        <h2 class="font-serif text-4xl text-steel-900 mb-8">Trusted by Leadership Teams</h2>
-        <blockquote class="text-2xl text-steel-700 italic">[PAUL QUOTE]</blockquote>
-        <p class="mt-8 text-steel-900 font-semibold text-xl">Paul Liesenberg</p>
-        <p class="text-steel-500">[PAUL TITLE]</p>
+    <section id="case-studies" class="py-24 bg-brand-paper border-t border-steel-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14"><h2 class="font-serif text-4xl text-steel-900">Case Studies</h2></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">Manchester Real Estate</h3><p class="text-steel-800 mb-4">Strategic growth infrastructure for real estate visibility.</p><p class="text-steel-600 leading-relaxed">Marchitects clarified the business positioning, follow up logic, and operational language needed to turn market opportunity into a more usable growth system.</p><p class="mt-6 pt-4 border-t border-steel-100 text-sm uppercase tracking-[0.12em] text-steel-500">Outcome pending client approval.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">CubeSmart Storage</h3><p class="text-steel-800 mb-4">Customer response and local conversion system mapping.</p><p class="text-steel-600 leading-relaxed">Marchitects mapped how storage operations can improve inquiry response, follow up, customer retention, and local conversion by treating communication as infrastructure.</p><p class="mt-6 pt-4 border-t border-steel-100 text-sm uppercase tracking-[0.12em] text-steel-500">Outcome pending client approval.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">Juniper Systems</h3><p class="text-steel-800 mb-4">Operational strategy for complex business execution.</p><p class="text-steel-600 leading-relaxed">Marchitects supported system level thinking around how business goals translate into workflows, language, tools, and measurable operating structure.</p><p class="mt-6 pt-4 border-t border-steel-100 text-sm uppercase tracking-[0.12em] text-steel-500">Outcome pending client approval.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="py-28 bg-brand-paper border-t border-steel-100 text-center fade-on-scroll">
+    <section class="py-24 bg-white border-t border-steel-100">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="section-kicker">Case Study</p>
-        <h2 class="font-serif text-4xl text-steel-900 mb-10">Applied Outcomes</h2>
-        <div class="elegant-card max-w-3xl mx-auto"><h3 class="font-serif text-3xl text-steel-900 mb-4">Seville Real Estate</h3><p class="text-steel-600 text-lg">[MAYA CLARK OUTCOME PLACEHOLDER]</p></div>
+        <div class="text-center mb-14">
+          <h2 class="font-serif text-4xl text-steel-900">FAQs</h2>
+          <p class="mt-4 text-steel-500 text-lg">Common questions before you schedule an assessment.</p>
+        </div>
+        <div class="space-y-6">
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">How do we know what is worth building first?</h3><p class="text-steel-600 leading-relaxed">Marchitects starts by identifying where time, money, and capacity are being lost. We look for repeatable workflows, stalled follow up, manual intake, underused databases, unclear messaging, and places where automation can create measurable value.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">What happens during the assessment?</h3><p class="text-steel-600 leading-relaxed">We review your operations, growth goals, current tools, customer journey, intake process, follow up systems, and team capacity. The result is a clear build path that shows what should be developed first.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">Can Marchitects build the system after the assessment?</h3><p class="text-steel-600 leading-relaxed">Yes. Marchitects can move from assessment into development, including workflow automation, agentic systems, email infrastructure, intake logic, content systems, and operational tools.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">What if we already bought AI tools?</h3><p class="text-steel-600 leading-relaxed">Marchitects helps determine which tools have practical value, where they fit, and what infrastructure is needed to make them useful inside the business.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">Can this work with our current CRM, website, or email platform?</h3><p class="text-steel-600 leading-relaxed">Yes. Marchitects designs around your current operating environment wherever possible. The goal is to connect the systems you already use and build the missing infrastructure around them.</p></article>
+          <article class="elegant-card"><h3 class="font-serif text-2xl text-steel-900 mb-3">How long until we see useful results?</h3><p class="text-steel-600 leading-relaxed">Useful clarity usually appears during the assessment phase. Build and deployment timelines depend on the complexity of the system, the number of workflows involved, and the level of team adoption required.</p></article>
+        </div>
       </div>
     </section>
+
+    <footer class="bg-steel-900 py-24 border-t border-steel-800">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">AI is changing how businesses grow.<br/>The companies with a system will move first.</h2>
+        <p class="text-xl text-white mb-10 font-sans font-light">Marchitects builds those systems.</p>
+        <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-5 bg-white text-steel-900 text-sm font-bold uppercase tracking-widest rounded-full shadow-xl hover:bg-steel-50 transition-all">Schedule Your Assessment</a>
+        <div class="mt-24 text-[12px] font-mono uppercase tracking-[0.2em] text-steel-100 opacity-80">© 2026 Marchitects<br/>Building institutional memory since 2021</div>
+      </div>
+    </footer>
   </main>
 
-  <footer class="bg-steel-900 py-24 border-t border-steel-800">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">AI is changing how businesses grow. The companies with a system will move first.</h2>
-      <p class="text-xl text-white mb-10 font-sans font-light">We build those systems.</p>
-      <a href="#" data-cal="1" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-5 bg-white text-steel-900 text-sm font-bold uppercase tracking-widest rounded-full shadow-xl hover:bg-steel-50 transition-all">Schedule Your Assessment</a>
-      <div class="mt-24 text-[12px] font-mono uppercase tracking-[0.2em] text-steel-100 opacity-80">&copy; 2021 2026 Marchitects | Building Institutional Memory Since 2021</div>
-    </div>
-  </footer>
-
   <script>
+
     lucide.createIcons();
 
     // Single source of truth for consultation link
