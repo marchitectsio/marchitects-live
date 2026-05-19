@@ -255,9 +255,9 @@
     .elegant-card {
       text-align: left;
       background-color: #ffffff;
-      border: 1px solid #f1f5f9;
-      border-radius: 0.75rem;
-      padding: 2.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2.5rem;
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
       transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
                   box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
@@ -316,6 +316,21 @@
 
     /* Fade on scroll */
     .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 0.9rem;
+    }
+
+    .pro-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(148,163,184,0), rgba(148,163,184,0.5), rgba(148,163,184,0));
+    }
     .fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
     /* Accessibility: Reduced Motion */
@@ -374,8 +389,9 @@
       </div>
     </header>
 
-    <section id="services" class="py-24 bg-white border-t border-steel-100">
+    <section id="services" class="py-28 bg-white border-t border-steel-100 fade-on-scroll">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="section-kicker">The Challenge</p>
         <h2 class="font-serif text-4xl text-steel-900 mb-8">Most businesses are losing time and revenue to manual work that AI can solve.</h2>
         <p class="text-steel-600 text-xl leading-relaxed">The challenge is knowing exactly where and building the right system to fix it.</p>
         <p class="mt-6 text-steel-600 text-xl leading-relaxed">You know AI is changing your industry. You need a clear path from where you are to where AI takes you.</p>
@@ -383,26 +399,34 @@
       </div>
     </section>
 
-    <section class="py-24 bg-brand-paper border-t border-steel-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section class="py-28 bg-brand-paper border-t border-steel-100 fade-on-scroll">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="section-kicker">Process</p>
+          <h2 class="font-serif text-4xl text-steel-900">Find. Develop. Deploy.</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 1: Find</h3><p class="text-lg text-steel-800 mb-4">Decide what is worth building.</p><p class="text-steel-600 leading-relaxed">We audit your operations to find where your business is bleeding. Time lost, decisions stalled, revenue left on the table. We map where AI creates the fastest return and give you a clear path forward.</p><p class="text-steel-600 leading-relaxed mt-4">This phase saves you time, makes you money, and tells you exactly what to build first.</p></article>
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 2: Develop</h3><p class="text-lg text-steel-800 mb-4">Build the system that makes AI useful.</p><p class="text-steel-600 leading-relaxed">We develop the workflows, automations, language assets, and agentic systems needed to make it real.</p><p class="text-steel-600 leading-relaxed mt-4">This phase turns the assessment into working infrastructure.</p></article>
         <article class="elegant-card"><h3 class="font-serif text-3xl text-steel-900 mb-3">Phase 3: Deploy</h3><p class="text-lg text-steel-800 mb-4">Put the system to work.</p><p class="text-steel-600 leading-relaxed">We move the system into your business, refine it around real usage, and support adoption across the team.</p><p class="text-steel-600 leading-relaxed mt-4">This phase turns AI from an idea into operating capacity.</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="team" class="py-24 bg-white border-t border-steel-100 text-center">
+    <section id="team" class="py-28 bg-white border-t border-steel-100 text-center fade-on-scroll">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="font-serif text-4xl text-steel-900 mb-8">Testimonials</h2>
+        <p class="section-kicker">Testimonial</p>
+        <h2 class="font-serif text-4xl text-steel-900 mb-8">Trusted by Leadership Teams</h2>
         <blockquote class="text-2xl text-steel-700 italic">[PAUL QUOTE]</blockquote>
         <p class="mt-8 text-steel-900 font-semibold text-xl">Paul Liesenberg</p>
         <p class="text-steel-500">[PAUL TITLE]</p>
       </div>
     </section>
 
-    <section class="py-24 bg-brand-paper border-t border-steel-100 text-center">
+    <section class="py-28 bg-brand-paper border-t border-steel-100 text-center fade-on-scroll">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="font-serif text-4xl text-steel-900 mb-10">Case Studies</h2>
+        <p class="section-kicker">Case Study</p>
+        <h2 class="font-serif text-4xl text-steel-900 mb-10">Applied Outcomes</h2>
         <div class="elegant-card max-w-3xl mx-auto"><h3 class="font-serif text-3xl text-steel-900 mb-4">Seville Real Estate</h3><p class="text-steel-600 text-lg">[MAYA CLARK OUTCOME PLACEHOLDER]</p></div>
       </div>
     </section>
