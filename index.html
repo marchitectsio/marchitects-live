@@ -32,7 +32,7 @@ body{
   --gold:      #a8834a;
   --gold-lt:   rgba(168,131,74,.22);
   --max:       1120px;
-  --pad:       clamp(1.5rem,5vw,4rem);
+  --pad:       clamp(1.25rem,4vw,4rem);
 
   /* ripple */
   --ripple-size:920px;
@@ -83,9 +83,9 @@ nav.scrolled{
 
 .nav-cta{
   font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
   background:var(--ink);color:var(--paper);
-  padding:.75rem 1.7rem;
+  padding:.75rem 1.5rem;
   border:1px solid var(--ink);
   border-radius:2px;
   text-decoration:none;
@@ -141,10 +141,10 @@ nav.scrolled{
   min-height:100svh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;
-  padding:8rem clamp(1rem,3vw,2.5rem) 5.25rem;
+  padding:clamp(4.5rem,8vw,7rem) var(--pad) clamp(4rem,7vw,6rem);
   background:var(--paper);
 }
-.hero-inner{position:relative;z-index:1;max-width:1400px;margin:0 auto;}
+.hero-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto;}
 .hero-eyebrow{
   display:inline-block;
   font-family:'IBM Plex Mono',monospace;
@@ -191,15 +191,15 @@ nav.scrolled{
 .hero-sub{
   font-size:clamp(1.2rem,1.5vw,1.35rem);
   font-weight:400;color:var(--ink-70);
-  line-height:1.6;max-width:860px;
+  line-height:1.6;max-width:52rem;
   margin:0 auto 2.75rem;
 }
 .hero-cta{
   display:inline-block;
   font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;
   background:var(--ink);color:var(--paper);
-  padding:1.05rem 2.5rem;
+  padding:1.1rem 2.75rem;
   border:1px solid var(--ink);
   border-radius:2px;
   text-decoration:none;
@@ -221,13 +221,14 @@ nav.scrolled{
   border-top:1px solid var(--ink-08);
 }
 .ity-inner{
-  max-width:820px;margin:0 auto;
-  text-align:center;
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);
+  align-items:start;text-align:left;
 }
 .ity-label{
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ink-45);margin-bottom:2rem;
+  color:rgba(13,26,46,.62);margin-bottom:2rem;
 }
 .ity-h{
   font-family:'Cormorant Garamond',serif;
@@ -248,7 +249,8 @@ nav.scrolled{
 /* ── Proof Bar ──────────────────────── */
 .proof-bar{
   display:grid;grid-template-columns:repeat(4,1fr);
-  background:var(--ink);
+  background:#071426;
+  padding:0 var(--pad);
 }
 .proof-cell{
   padding:3.5rem 2.5rem;
@@ -268,7 +270,7 @@ nav.scrolled{
 
 /* ── Section shell ──────────────────── */
 .section{
-  padding:5rem var(--pad);
+  padding:clamp(4rem,8vw,7rem) var(--pad);
   border-top:1px solid var(--ink-08);
 }
 .section.alt{background:var(--paper-alt);}
@@ -278,7 +280,7 @@ nav.scrolled{
   display:inline-block;
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ink-45);
+  color:rgba(13,26,46,.62);
   padding-bottom:.35rem;
   border-bottom:1px solid var(--ink-18);
   margin-bottom:1.25rem;
@@ -303,23 +305,22 @@ nav.scrolled{
 
 /* ── Premium cards ──────────────────── */
 /* Framework steps — full-width list */
-.framework-list{margin-top:3.5rem;}
+.framework-list{margin-top:3.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4vw,4rem);}
 .framework-step{
-  display:grid;grid-template-columns:64px 1fr;
-  gap:2.5rem;
-  padding:2.75rem 0;
+  display:block;
+  padding:0;
   border-top:1px solid var(--ink-08);
   transition:background .22s;
 }
-.framework-step:last-child{border-bottom:1px solid var(--ink-08);}
+.framework-step:last-child{border-bottom:none;}
 .step-num{
   font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.1em;color:var(--ink-45);
-  padding-top:.4rem;
+  font-size:12px;letter-spacing:.1em;color:rgba(13,26,46,.62);
+  margin-bottom:.75rem;
 }
 .step-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:2.1rem;font-weight:500;color:var(--ink);margin-bottom:.65rem;
+  font-size:2rem;font-weight:500;color:var(--ink);margin-bottom:.65rem;
 }
 .step-body{
   font-size:1.2rem;font-weight:400;
@@ -337,7 +338,7 @@ nav.scrolled{
 .outcome-label{
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-45);
+  color:rgba(13,26,46,.62);
 }
 .outcome-text{font-size:1.05rem;font-weight:500;color:var(--ink);}
 
@@ -361,7 +362,7 @@ nav.scrolled{
 .case-industry{
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-45);margin-bottom:.65rem;
+  color:rgba(13,26,46,.62);margin-bottom:.65rem;
 }
 .case-name{
   font-family:'Cormorant Garamond',serif;
@@ -371,7 +372,7 @@ nav.scrolled{
 .case-status{
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-45);margin-bottom:1.1rem;
+  color:rgba(13,26,46,.62);margin-bottom:1.1rem;
 }
 .case-body{
   font-size:1.2rem;font-weight:400;
@@ -383,6 +384,9 @@ nav.scrolled{
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:1.5rem;margin-top:3rem;
 }
+#testimonials{background:#071426;}
+#testimonials .sec-tag,#testimonials .sec-h{color:var(--paper);}
+#testimonials .sec-tag{border-bottom-color:rgba(255,255,255,.24);}
 .tcard{
   background:var(--white);
   border:1px solid var(--ink-08);
@@ -406,7 +410,7 @@ nav.scrolled{
 .tattrib-name{font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:.2rem;}
 .tattrib-co{
   font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-45);
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(13,26,46,.62);
 }
 
 /* FAQ */
@@ -490,7 +494,7 @@ nav.scrolled{
 /* ── Closing ────────────────────────── */
 .closing{
   background:var(--ink);
-  padding:6.25rem var(--pad);
+  padding:clamp(4rem,8vw,7rem) var(--pad);
   text-align:center;
   border-top:1px solid rgba(255,255,255,.04);
   position:relative;overflow:hidden;
@@ -563,6 +567,7 @@ footer{
 /* ── Mobile ──────────────────────────── */
 @media(max-width:860px){
   .ity-inner,.intro-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .framework-list{grid-template-columns:1fr;}
   .proof-bar{grid-template-columns:1fr 1fr;}
   .cases-grid{grid-template-columns:1fr;border-right:none;}
   .case-card{border-right:none;border-bottom:1px solid var(--ink-18);}
@@ -570,6 +575,7 @@ footer{
   .tgrid{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
+  .proof-bar{grid-template-columns:1fr;}
   footer{flex-direction:column;gap:.75rem;text-align:center;}
 }
 </style>
@@ -613,8 +619,8 @@ footer{
       <h2 class="ity-h">The tools are in place. The business still runs through you.</h2>
     </div>
     <div class="fade" style="overflow:visible;transition-delay:.18s">
-      <p class="ity-body">You have invested in tools, courses, webinars, automations, and platforms. Your CRM holds contacts that rarely receive meaningful follow-up. Your automations fire but do not convert. Your content calendar starts, stops, and restarts when delivery pulls you back in. AI sits at the edge of the business rather than inside the operating model.</p>
-      <p class="ity-body">The tools are not the problem. The missing layer is architecture.</p>
+      <p class="ity-body">You have invested in tools, courses, webinars, automations, and platforms. Your CRM is filled with contacts that rarely receive meaningful follow-up. Your automations fire but do not convert. Your content calendar starts, stops, and restarts when delivery pulls you back in. AI for productivity sits at the edge of the business rather than inside the operating model.</p>
+      <p class="ity-body">The missing layer is deployed architecture.</p>
       <p class="ity-close">Marchitects builds the structure that connects the work, the message, and the next action.</p>
     </div>
   </div>
@@ -658,7 +664,7 @@ footer{
 <!-- ── A.D.D. Framework ────────────────────────────────── -->
 <section class="section alt" id="abc-structure">
   <div class="sec-inner">
-    <span class="sec-tag fade">The Method</span>
+    <span class="sec-tag fade">OUR METHODOLOGY</span>
     <h2 class="sec-h fade">The A.B.C. Structure™</h2>
     <p class="sec-b fade">Marchitects uses the A.B.C. Structure™ to assess what is costing the business capacity, build the right solution, and commission it into daily operations.</p>
     <div class="framework-list">
@@ -752,7 +758,7 @@ footer{
       <span class="sec-tag faq-label">Common Questions</span>
       <h2 class="sec-h faq-title">Before you schedule.</h2>
     </div>
-    <div class="faq-list">
+    <div class="faq-list faq-accordion">
       <details class="faq-item fade">
         <summary class="faq-question"><span class="faq-q">How do we know what is worth building first?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-answer"><p class="faq-a">Marchitects starts with business impact. We look for repeatable work, stalled follow-up, manual intake, underused data, and places where automation or clearer communication can create measurable value.</p></div>
