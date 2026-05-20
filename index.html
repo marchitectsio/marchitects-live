@@ -442,6 +442,51 @@ nav.scrolled{
 .faq-answer{margin-top:1rem;max-width:52rem;}
 .faq-a{font-size:1.2rem;font-weight:400;color:var(--ink-70);line-height:1.88;}
 
+
+.faq-section .faq-header{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:56rem;
+}
+.faq-section .section-label,
+.faq-label{
+  display:block;
+  text-align:center;
+  color:rgba(10,20,35,.72);
+  font-size:.78rem;
+  letter-spacing:.32em;
+  font-weight:500;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
+.faq-section .section-h2,
+.faq-title{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:2.5rem;
+}
+.faq-list,
+.faq-accordion{
+  max-width:68rem;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+}
+.faq-item{width:100%;}
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  text-align:left;
+}
+.faq-answer,
+.faq-a{
+  text-align:left;
+  max-width:52rem;
+}
+
 /* ── Closing ────────────────────────── */
 .closing{
   background:var(--ink);
@@ -701,10 +746,12 @@ footer{
 </section>
 
 <!-- ── FAQ ─────────────────────────────────────────────── -->
-<section class="section">
+<section class="section faq-section">
   <div class="sec-inner">
-    <span class="sec-tag fade">Common Questions</span>
-    <h2 class="sec-h fade">Before you schedule.</h2>
+    <div class="faq-header fade">
+      <span class="sec-tag faq-label">Common Questions</span>
+      <h2 class="sec-h faq-title">Before you schedule.</h2>
+    </div>
     <div class="faq-list">
       <details class="faq-item fade">
         <summary class="faq-question"><span class="faq-q">How do we know what is worth building first?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
