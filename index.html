@@ -232,7 +232,7 @@ nav.scrolled{
 }
 .ity-h{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.4rem,3.6vw,3.6rem);
+  font-size:clamp(2.8rem,4vw,4.2rem);
   font-weight:500;color:var(--ink);line-height:1.1;
   margin-bottom:2.5rem;
 }
@@ -296,6 +296,7 @@ nav.scrolled{
   color:var(--ink-70);line-height:1.85;
   max-width:560px;margin-bottom:1.25rem;
 }
+.tm-mark{font-size:.48em;vertical-align:super;letter-spacing:0;font-style:normal;}
 
 /* ── Two-col intro grid ─────────────── */
 .intro-grid{
@@ -305,7 +306,7 @@ nav.scrolled{
 
 /* ── Premium cards ──────────────────── */
 /* Framework steps — full-width list */
-.framework-list{margin-top:3.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4vw,4rem);}
+.framework-list{margin-top:3.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2.5rem,5vw,5rem);}
 .framework-step{
   display:block;
   padding:0;
@@ -320,11 +321,11 @@ nav.scrolled{
 }
 .step-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:2rem;font-weight:500;color:var(--ink);margin-bottom:.65rem;
+  font-size:clamp(1.6rem,2vw,2.1rem);font-weight:500;color:var(--ink);margin-bottom:.65rem;
 }
 .step-body{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.88;
+  font-size:1rem;font-weight:400;
+  color:var(--ink-70);line-height:1.75;
   margin-bottom:1.1rem;max-width:600px;
 }
 .outcome-row{
@@ -349,7 +350,7 @@ nav.scrolled{
   border:1px solid var(--ink-18);
 }
 .case-card{
-  padding:2.5rem 2.25rem;
+  padding:3rem 2.5rem;
   border-right:1px solid var(--ink-18);
   position:relative;
   background:var(--paper);
@@ -366,8 +367,8 @@ nav.scrolled{
 }
 .case-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.7rem;font-weight:500;color:var(--ink);
-  line-height:1.12;margin-bottom:.45rem;
+  font-size:1.95rem;font-weight:500;color:var(--ink);
+  line-height:1.15;margin-bottom:.7rem;white-space:nowrap;
 }
 .case-status{
   font-family:'IBM Plex Mono',monospace;
@@ -375,8 +376,8 @@ nav.scrolled{
   color:rgba(13,26,46,.62);margin-bottom:1.1rem;
 }
 .case-body{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.82;
+  font-size:.98rem;font-weight:400;
+  color:var(--ink-70);line-height:1.7;
 }
 
 /* Testimonial cards — white, left-rail accent */
@@ -402,9 +403,10 @@ nav.scrolled{
 }
 .tquote{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.35rem;font-style:italic;
-  color:var(--ink);line-height:1.72;
-  flex:1;margin-bottom:1.5rem;
+  font-size:1.18rem;font-style:italic;
+  color:var(--ink);line-height:1.7;
+  flex:1;margin:1.2rem 0 1.35rem;
+  padding-top:1rem;border-top:1px solid var(--ink-08);
 }
 .t-divider{height:1px;background:var(--ink-08);margin-bottom:1.25rem;}
 .tattrib-name{font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:.2rem;}
@@ -417,7 +419,7 @@ nav.scrolled{
 .faq-list{margin-top:2.5rem;max-width:780px;}
 .faq-item{
   border-top:1px solid var(--ink-08);
-  padding:1.25rem 0;
+  padding:1.35rem 0;
 }
 .faq-item:last-child{border-bottom:1px solid var(--ink-08);}
 .faq-question{
@@ -432,8 +434,8 @@ nav.scrolled{
 .faq-question::marker{content:"";}
 .faq-q{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;font-weight:500;color:var(--ink);
-  line-height:1.25;
+  font-size:1.12rem;font-weight:500;color:var(--ink);
+  line-height:1.45;
 }
 .faq-icon{
   font-size:1.5rem;
@@ -444,7 +446,7 @@ nav.scrolled{
 }
 .faq-item[open] .faq-icon{transform:rotate(45deg);}
 .faq-answer{margin-top:1rem;max-width:52rem;}
-.faq-a{font-size:1.2rem;font-weight:400;color:var(--ink-70);line-height:1.88;}
+.faq-a{font-size:1rem;font-weight:400;color:var(--ink-70);line-height:1.75;}
 
 
 .faq-section .faq-header{
@@ -586,9 +588,9 @@ footer{
 <nav id="navbar">
   <a href="/" class="nav-brand">Marchitects.</a>
   <ul class="nav-center">
-    <li><a href="#what-we-build">Services</a></li>
+    <li><a href="#abc-structure">Services</a></li>
     <li><a href="#case-studies">Current Engagements</a></li>
-    <li><a href="#testimonials">What Clients Say</a></li>
+    <li><a href="#faq">Common Questions</a></li>
   </ul>
   <a href="https://cal.com/marchitects" class="nav-cta">Schedule Your Assessment</a>
 </nav>
@@ -646,26 +648,11 @@ footer{
   </div>
 </div>
 
-<!-- ── What We Build ───────────────────────────────────── -->
-<section class="section" id="what-we-build">
-  <div class="sec-inner">
-    <div class="intro-grid">
-      <div class="fade">
-        <span class="sec-tag">What We Build</span>
-        <h2 class="sec-h">We turn underused data, stalled follow-up, manual workflows, and unclear messaging into working business infrastructure.</h2>
-      </div>
-      <div class="fade">
-        <p class="sec-b">Most businesses have the raw material: contacts, tools, traffic, inquiries, customer history, and service demand. Marchitects organizes that material into a structure the business can use.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── A.D.D. Framework ────────────────────────────────── -->
 <section class="section alt" id="abc-structure">
   <div class="sec-inner">
     <span class="sec-tag fade">OUR METHODOLOGY</span>
-    <h2 class="sec-h fade">The A.B.C. Structure™</h2>
+    <h2 class="sec-h fade">The A.B.C. Structure<span class="tm-mark">TM</span></h2>
     <p class="sec-b fade">Marchitects uses the A.B.C. Structure™ to assess what is costing the business capacity, build the right solution, and commission it into daily operations.</p>
     <div class="framework-list">
 
@@ -725,7 +712,7 @@ footer{
 </section>
 
 <!-- ── FAQ ─────────────────────────────────────────────── -->
-<section class="section faq-section">
+<section class="section faq-section" id="faq">
   <div class="sec-inner">
     <div class="faq-header fade">
       <span class="sec-tag faq-label">Common Questions</span>
