@@ -141,7 +141,7 @@ nav.scrolled{
   min-height:100svh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;
-  padding:9.25rem clamp(1rem,3vw,2.5rem) 6.5rem;
+  padding:8rem clamp(1rem,3vw,2.5rem) 5.25rem;
   background:var(--paper);
 }
 .hero-inner{position:relative;z-index:1;max-width:1400px;margin:0 auto;}
@@ -160,10 +160,10 @@ nav.scrolled{
 }
 .hero-h1{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(5.5rem,8vw,9.5rem);
+  font-size:clamp(4.9rem,7.1vw,8rem);
   font-weight:500;color:var(--ink);
-  line-height:.88;margin-bottom:clamp(.5rem,1vw,1rem);
-  letter-spacing:-.02em;
+  line-height:.84;margin-bottom:.25rem;
+  letter-spacing:-.018em;
   text-align:center;
 }
 .hero-h1 span{display:block;}
@@ -178,12 +178,14 @@ nav.scrolled{
 }
 .hero-subline{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.5rem,5vw,6rem);
-  line-height:.9;
+  font-size:clamp(4.9rem,7.1vw,8rem);
+  line-height:.84;
   margin-top:0;
-  margin-bottom:1.15rem;
+  margin-bottom:.85rem;
   color:var(--ink);
   font-style:italic;
+  font-weight:500;
+  letter-spacing:-.018em;
   text-align:center;
 }
 .hero-sub{
@@ -207,12 +209,10 @@ nav.scrolled{
 
 
 @media(max-width:900px){
-  .hero{padding:8.25rem clamp(1rem,4vw,1.5rem) 5.25rem;}
+  .hero{padding:7.5rem clamp(1rem,4vw,1.5rem) 4.5rem;}
   .hero-inner{max-width:960px;}
-  .hero-h1{font-size:clamp(3.2rem,12vw,5.8rem);line-height:.92;}
-  .hero-subline{font-size:clamp(2.4rem,9vw,4rem);line-height:.92;margin-bottom:.9rem;}
-  .hero-h1{font-size:clamp(3.2rem,12vw,5.8rem);line-height:1.05;}
-  .hero-h1 em{margin-top:.65rem;}
+  .hero-h1{font-size:clamp(3rem,11.5vw,5.2rem);line-height:.9;}
+  .hero-subline{font-size:clamp(3rem,11.5vw,5.2rem);line-height:.9;margin-bottom:.75rem;}
 }
 /* ── Is This You ────────────────────── */
 .ity{
@@ -413,156 +413,39 @@ nav.scrolled{
 .faq-list{margin-top:2.5rem;max-width:780px;}
 .faq-item{
   border-top:1px solid var(--ink-08);
-  padding:2rem 0;
+  padding:1.25rem 0;
 }
 .faq-item:last-child{border-bottom:1px solid var(--ink-08);}
+.faq-question{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+}
+.faq-question::-webkit-details-marker{display:none;}
+.faq-question::marker{content:"";}
 .faq-q{
   font-family:'Cormorant Garamond',serif;
   font-size:1.5rem;font-weight:500;color:var(--ink);
-  margin-bottom:.75rem;line-height:1.25;
+  line-height:1.25;
 }
-.faq-a{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.88;
+.faq-icon{
+  font-size:1.5rem;
+  line-height:1;
+  color:var(--ink);
+  transition:transform 180ms ease;
+  flex-shrink:0;
 }
-
-}
-
-/* ── Two-col intro grid ─────────────── */
-.intro-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
-}
-@media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:2.5rem;}}
-
-/* ── Premium cards ──────────────────── */
-/* Framework steps — full-width list */
-.framework-list{margin-top:3.5rem;}
-.framework-step{
-  display:grid;grid-template-columns:64px 1fr;
-  gap:2.5rem;
-  padding:2.75rem 0;
-  border-top:1px solid var(--ink-08);
-  transition:background .22s;
-}
-.framework-step:last-child{border-bottom:1px solid var(--ink-08);}
-.step-num{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.1em;color:var(--ink-45);
-  padding-top:.4rem;
-}
-.step-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.1rem;font-weight:500;color:var(--ink);margin-bottom:.65rem;
-}
-.step-body{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.88;
-  margin-bottom:1.1rem;max-width:600px;
-}
-.outcome-row{
-  display:inline-flex;align-items:baseline;gap:.75rem;
-  padding:.55rem 1rem;
-  background:var(--paper);
-  border:1px solid var(--ink-08);
-  border-radius:2px;
-}
-.section.alt .outcome-row{background:var(--white);}
-.outcome-label{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-45);
-}
-.outcome-text{font-size:1.05rem;font-weight:500;color:var(--ink);}
-
-/* Case cards — editorial, 3-col */
-.cases-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  margin-top:3rem;
-  border:1px solid var(--ink-18);
-}
-.case-card{
-  padding:2.5rem 2.25rem;
-  border-right:1px solid var(--ink-18);
-  position:relative;
-  background:var(--paper);
-  transition:background .25s;
-  /* Top gold accent — the McKinsey/consulting signal */
-  border-top:2px solid var(--gold);
-}
-.case-card:last-child{border-right:none;}
-.case-card:hover{background:var(--white);}
-.case-industry{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-45);margin-bottom:.65rem;
-}
-.case-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.7rem;font-weight:500;color:var(--ink);
-  line-height:1.12;margin-bottom:.45rem;
-}
-.case-status{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-45);margin-bottom:1.1rem;
-}
-.case-body{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.82;
-}
-
-/* Testimonial cards — white, left-rail accent */
-.tgrid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;margin-top:3rem;
-}
-.tcard{
-  background:var(--white);
-  border:1px solid var(--ink-08);
-  /* Left navy rail — editorial signal */
-  border-left:3px solid var(--ink);
-  padding:2.25rem 2rem;
-  display:flex;flex-direction:column;
-  transition:box-shadow .25s,transform .25s;
-}
-.tcard:hover{
-  box-shadow:0 12px 40px rgba(13,26,46,.08);
-  transform:translateY(-3px);
-}
-.tquote{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.35rem;font-style:italic;
-  color:var(--ink);line-height:1.72;
-  flex:1;margin-bottom:1.5rem;
-}
-.t-divider{height:1px;background:var(--ink-08);margin-bottom:1.25rem;}
-.tattrib-name{font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:.2rem;}
-.tattrib-co{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-45);
-}
-
-/* FAQ */
-.faq-list{margin-top:2.5rem;max-width:780px;}
-.faq-item{
-  border-top:1px solid var(--ink-08);
-  padding:2rem 0;
-}
-.faq-item:last-child{border-bottom:1px solid var(--ink-08);}
-.faq-q{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;font-weight:500;color:var(--ink);
-  margin-bottom:.75rem;line-height:1.25;
-}
-.faq-a{
-  font-size:1.2rem;font-weight:400;
-  color:var(--ink-70);line-height:1.88;
-}
+.faq-item[open] .faq-icon{transform:rotate(45deg);}
+.faq-answer{margin-top:1rem;max-width:52rem;}
+.faq-a{font-size:1.2rem;font-weight:400;color:var(--ink-70);line-height:1.88;}
 
 /* ── Closing ────────────────────────── */
 .closing{
   background:var(--ink);
-  padding:8rem var(--pad);
+  padding:6.25rem var(--pad);
   text-align:center;
   border-top:1px solid rgba(255,255,255,.04);
   position:relative;overflow:hidden;
@@ -577,10 +460,13 @@ nav.scrolled{
 }
 .closing-inner{max-width:600px;margin:0 auto;position:relative;z-index:1;}
 .closing-eyebrow{
-  display:block;
+  display:inline-block;
   font-family:'IBM Plex Mono',monospace;
   font-size:12px;letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(240,237,230,.55);margin-bottom:2rem;
+  color:rgba(240,237,230,.82);margin-bottom:1.35rem;
+  border:1px solid rgba(240,237,230,.6);
+  border-radius:999px;
+  padding:.45rem .95rem;
 }
 .closing-h{
   font-family:'Cormorant Garamond',serif;
@@ -669,9 +555,6 @@ footer{
       <span class="hero-highlight">to scale their growth.</span>
     </h1>
     <p class="hero-subline">You should too.</p>
-      The most successful businesses are using AI to scale their growth.
-      <em>You should too.</em>
-    </h1>
     <p class="hero-sub">Marchitects helps businesses replace scattered manual work with operating systems that improve communication, decision-making, and revenue generation.</p>
     <a href="https://cal.com/marchitects" class="hero-cta">Schedule Your Assessment</a>
   </div>
@@ -759,17 +642,6 @@ footer{
         </div>
       </div>
 
-        </div>
-      </div>
-
-      <div class="framework-step fade">
-        <div class="step-num">03</div>
-        <div>
-          <div class="step-title">Commission.</div>
-          <p class="step-body">We install the build inside the business, connect it to the team's workflow, and support adoption until the process runs without constant intervention.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -834,31 +706,31 @@ footer{
     <span class="sec-tag fade">Common Questions</span>
     <h2 class="sec-h fade">Before you schedule.</h2>
     <div class="faq-list">
-      <div class="faq-item fade">
-        <div class="faq-q">How do we know what is worth building first?</div>
-        <div class="faq-a">Marchitects starts with business impact. We look for repeatable work, stalled follow-up, manual intake, underused data, and places where automation or clearer communication can create measurable value.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">What happens during the assessment?</div>
-        <div class="faq-a">We review your operations, growth goals, tools, customer journey, intake process, follow-up flow, and team capacity. You leave with a prioritized build path.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">Can Marchitects build after the assessment?</div>
-        <div class="faq-a">Yes. The assessment moves into development across workflow automation, agentic systems, email infrastructure, intake logic, content systems, and operational tooling.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">Do you build funnels?</div>
-        <div class="faq-a">Marchitects designs the conversion architecture behind the funnel: lead capture, intake logic, automation sequencing, and the language that moves prospects to action. Social Following Studios handles full-service execution when needed.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">What if we purchased tools before engaging Marchitects?</div>
-        <div class="faq-a">Marchitects evaluates what belongs in the operating model, what needs connection, and what can be retired or ignored.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">Can this work alongside our current CRM, website, or email platform?</div>
-        <div class="faq-a">Yes. Marchitects designs around the current environment first, then builds the missing structure around it.</div>
-      </div>
-    </div>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">How do we know what is worth building first?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">Marchitects starts with business impact. We look for repeatable work, stalled follow-up, manual intake, underused data, and places where automation or clearer communication can create measurable value.</p></div>
+      </details>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">What happens during the assessment?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">We review your operations, growth goals, tools, customer journey, intake process, follow-up flow, and team capacity. You leave with a prioritized build path.</p></div>
+      </details>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">Can Marchitects build after the assessment?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">Yes. The assessment moves into development across workflow automation, agentic systems, email infrastructure, intake logic, content systems, and operational tooling.</p></div>
+      </details>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">Do you build funnels?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">Marchitects designs the conversion architecture behind the funnel: lead capture, intake logic, automation sequencing, and the language that moves prospects to action. Social Following Studios handles full-service execution when needed.</p></div>
+      </details>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">What if we purchased tools before engaging Marchitects?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">Marchitects evaluates what belongs in the operating model, what needs connection, and what can be retired or ignored.</p></div>
+      </details>
+      <details class="faq-item fade">
+        <summary class="faq-question"><span class="faq-q">Can this work alongside our current CRM, website, or email platform?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+        <div class="faq-answer"><p class="faq-a">Yes. Marchitects designs around the current environment first, then builds the missing structure around it.</p></div>
+      </details>
+    </div></div>
   </div>
 </section>
 
@@ -874,8 +746,7 @@ footer{
 
 <!-- ── Footer ──────────────────────────────────────────── -->
 <footer>
-  <div class="footer-brand">Marchitects. &nbsp;·&nbsp; Building Operational Capacity Since 2021</div>
-  <div class="footer-note">© 2021–2026 Marchitects LLC</div>
+  <div class="footer-brand">Marchitects. &nbsp;·&nbsp; Building Operational Capacity Since 2021 &nbsp;·&nbsp; © 2021–2026 Marchitects LLC</div>
 </footer>
 
 <script>
