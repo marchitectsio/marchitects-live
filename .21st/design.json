@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "project": {
+    "name": "marchitects-live",
+    "productType": null,
+    "stack": []
+  },
+  "sources": {
+    "tokens": [],
+    "components": [],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "unknown",
+    "colors": {},
+    "typography": {},
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [
+      "Preserve the existing water-ripple treatment exactly.",
+      "Maintain the existing static HTML stack and page section sequence.",
+      "Use an expensive civic and institutional-consultancy visual language."
+    ],
+    "avoid": [
+      "Do not introduce a framework migration solely for motion.",
+      "Do not use decorative gradients, rounded dashboard cards, or consumer-SaaS styling."
+    ]
+  },
+  "decisions": [
+    "The homepage pairs restrained editorial typography, document-like rules, and data-dense proof surfaces with the existing water ripple.",
+    "Motion remains minimal and respects reduced-motion preferences; use the existing static stack rather than adding Framer Motion."
+  ],
+  "evidence": [],
+  "generatedAt": "2026-10-05T05:44:51.780Z"
+}
