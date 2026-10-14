@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.marchitects.builders/</loc></url>
-  <url><loc>https://www.marchitects.builders/compliance</loc></url>
+  <url><loc>https://www.marchitects.builders/about/</loc></url>
+  <url><loc>https://www.marchitects.builders/capabilities/</loc></url>
+  <url><loc>https://www.marchitects.builders/who-we-serve/</loc></url>
+  <url><loc>https://www.marchitects.builders/public-sector/</loc></url>
+  <url><loc>https://www.marchitects.builders/economic-development/</loc></url>
+  <url><loc>https://www.marchitects.builders/compliance/</loc></url>
+  <url><loc>https://www.marchitects.builders/work/</loc></url>
+  <url><loc>https://www.marchitects.builders/insights/</loc></url>
+  <url><loc>https://www.marchitects.builders/contact/</loc></url>
   <url><loc>https://www.marchitects.builders/pdf-compliance</loc></url>
   <url><loc>https://www.marchitects.builders/247</loc></url>
 </urlset>
