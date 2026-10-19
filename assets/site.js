@@ -26,7 +26,7 @@
       if (e.key === 'Escape' && menu.classList.contains('open')) { setOpen(false); toggle.focus(); }
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 1279 && menu.classList.contains('open')) setOpen(false);
+      if (window.innerWidth > 1379 && menu.classList.contains('open')) setOpen(false);
     });
   }
 

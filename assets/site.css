@@ -124,13 +124,13 @@ img{max-width:100%;display:block;}
 }
 body.menu-open{overflow:hidden;}
 
-@media(max-width:1439px){
+@media(max-width:1599px){
   .site-nav .nav-brand{font-size:1.95rem;}
   .nav-links{gap:1.15rem;}
   .nav-links a{letter-spacing:.1em;}
   .site-nav > .nav-cta{padding:.7rem 1.1rem;}
 }
-@media(max-width:1279px){
+@media(max-width:1379px){
   .nav-links,.site-nav > .nav-cta{display:none;}
   .nav-toggle{display:flex;}
 }
@@ -454,3 +454,10 @@ body.menu-open{overflow:hidden;}
 
 .def-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--ink-18);transition:text-decoration-color .2s;}
 .def-link:hover{text-decoration-color:var(--ink);}
+
+/* Case facts (challenge, structure, record, parallel) */
+.case-facts{margin:0 0 1.75rem;border-top:1px solid var(--ink-08);}
+.case-facts div{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--ink-08);}
+.case-facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-62);padding-top:.3rem;}
+.case-facts dd{margin:0;font-size:1.1rem;color:var(--ink-70);line-height:1.7;}
+@media(max-width:600px){.case-facts div{grid-template-columns:1fr;gap:.35rem;}}
